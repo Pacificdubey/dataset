@@ -14,13 +14,13 @@ print(Q1)
 
 # Q2 mean sugar amount from subway
 Q2 <- fastfood %>% filter(restaurant %in% c("Subway")) %>%
-       summarise(Mean_Sugar_Amt = mean(sugar)) %>% unlist(use.names = FALSE)
+       summarise(Mean_Sugar_Amt = mean(sugar)) %>%round(2) %>% unlist(use.names = FALSE)
 
 print(Q2)
 
 # Q3 mean calories of taco bell
 Q3 <- fastfood %>% filter(restaurant %in% c("Taco Bell")) %>%
-  summarise(Mean_calories = mean(calories)) %>% unlist(use.names = FALSE)
+  summarise(Mean_calories = mean(calories)) %>% round(2) %>%unlist(use.names = FALSE)
 
 print(Q3)
 
@@ -32,6 +32,12 @@ Q4 <- fastfood %>% mutate(fatXsugar = total_fat*sugar) %>%
   head(3)
 
 print(Q4)
+
+
+
+
+
+
 
 
 
